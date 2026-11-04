@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../../services/spotify.service';
-import { ArtistData } from '../../data/artist-data';
-import { AlbumData } from '../../data/album-data';
-import { TrackData } from '../../data/track-data';
 import { ResourceData } from '../../data/resource-data';
 
 @Component({
@@ -24,8 +21,7 @@ export class SearchComponent implements OnInit {
   }
 
   search() {
-    //TODO: call search function in spotifyService and parse response
-    this.spotifyService.search(this.searchString, this.searchCategory).subscribe((data: any) => {
+    this.spotifyService.searchFor(this.searchCategory, this.searchString).then((data) => {
       this.resources = data;
     });
   }
