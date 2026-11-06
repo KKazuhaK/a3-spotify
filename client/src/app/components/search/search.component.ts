@@ -20,7 +20,12 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
+  clearResources() {
+    this.resources = undefined;
+  }
+
   search() {
+    this.resources = undefined;
     this.spotifyService.searchFor(this.searchCategory, this.searchString).then((data) => {
       this.resources = data;
     });

@@ -56,7 +56,5 @@ submission. Put the dummy_webserver folder in the repository root, then:
     cd dummy_webserver && npm install && npm start
     cd client && npm install && ng serve
 
-and open http://localhost:4200. Searching, then switching the dropdown to a
-different category without pressing Search again can log an error in the
-console; pressing Search fixes it (the assignment lists this as optional).
+and open http://localhost:4200.
 
